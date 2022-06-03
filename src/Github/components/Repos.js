@@ -36,9 +36,9 @@ const Repos = () => {
     });
 
   //stars, forks
-  let { stars, forks } = repos.reduce(
+  let { stars} = repos.reduce(
     (total, item) => {
-      const { stargazers_count, name, forks } = item;
+      const { stargazers_count, name } = item;
       total.stars[stargazers_count] = { label: name, value: stargazers_count };
       return total;
     },
